@@ -28,6 +28,9 @@ class Book extends LibraryItem {
         this.author = author;
         this.genre = genre;
     }
+    describe() {
+        console.log(`${this.title} is written by ${this.author} and its genre is ${this.genre}.\nIt is currently ${this.isAvailable ? "available" : "not available"} for checkout.`);
+    }
 }
 
 class DVD extends LibraryItem {
@@ -56,5 +59,5 @@ console.log(gladiator);
 console.log(hungerGames);
 console.log(gameInformer);
 console.log(gladiator.director);
-console.log(hungerGames.author);
+hungerGames.describe();
 console.log(gameInformer.issueNumber);
